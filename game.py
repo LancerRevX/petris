@@ -7,6 +7,8 @@ pygame.init()
 pygame.font.init()
 font = pygame.font.SysFont('Arial', 30)
 
+pygame.key.set_repeat(1, 100)
+
 screen: pygame.Surface = pygame.display.set_mode((800, 800))
 pygame.display.set_caption('Тетрис')
 
@@ -169,18 +171,18 @@ while running:
 
     if game_over:
         text = font.render(
-            'Game Over',
+            'Игра окончена',
             False, (0, 0, 0)
         )
         screen.blit(text, (570, 300))
     if paused:
         text = font.render(
-            'Pause',
+            'Пауза',
             False, (0, 0, 0)
         )
         screen.blit(text, (570, 350))
     text = font.render(
-        'Score: ' + str(score),
+        'Очки: ' + str(score),
         False, (0, 0, 0)
     )
     screen.blit(text, (570, 400))
