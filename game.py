@@ -7,7 +7,7 @@ pygame.init()
 pygame.font.init()
 font = pygame.font.SysFont('Arial', 30)
 
-pygame.key.set_repeat(1, 100)
+pygame.key.set_repeat(100, 100)
 
 screen: pygame.Surface = pygame.display.set_mode((800, 800))
 pygame.display.set_caption('Тетрис')
